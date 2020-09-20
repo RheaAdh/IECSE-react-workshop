@@ -1,0 +1,72 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #ffeaea;
+}
+.navbar {
+  background-color: #db5050;
+  width: 100%;
+  position: fixed;
+  min-height: 10vh;
+}
+.navbar .title {
+  color: rgb(255, 250, 250);
+  line-height: 10vh;
+  text-align: left;
+  font-size: 1.3rem;
+  padding-left: 3vw;
+  font-weight: bold;
+}
+form {
+  min-height: 10vh;
+  margin-top: 1vh;
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+}
+#searchBar {
+  border: none;
+  height: 5vh;
+  color: #ffeaea;
+  font-size: 0.7rem;
+  border-bottom: 1.1px solid #ffeaea;
+  padding: 2px;
+  background-color: #db5050;
+}
+::placeholder {
+  color: #ffeaea;
+}
+#search {
+  border: none;
+  background-color: #e42b2b;
+  color: rgb(255, 250, 250);
+  height: 5vh;
+  font-size: 0.7rem;
+  margin-left: 8px;
+  font-size: 0.7rem;
+}
+
+.card {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  max-width: 200px;
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(124, 32, 32, 0.6);
+  border-radius: 10px;
+}
+.ratings {
+  color: red;
+  font-size: 22px;
+}
