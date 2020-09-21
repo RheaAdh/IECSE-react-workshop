@@ -12,8 +12,8 @@ export default class Rest extends React.Component {
           }
           className="dislike"
         >
-          <span role="img" aria-label="dislike">
-            👎{this.state.likes}
+          <span class="likes " role="img" aria-label="dislike">
+            👎 {this.state.likes} liked this
           </span>
         </div>
       );
@@ -25,18 +25,20 @@ export default class Rest extends React.Component {
           }
           className="like"
         >
-          <span role="img" aria-label="like">
-            👍 {this.state.likes}
+          <span class="likes" role="img" aria-label="like">
+            👍 {this.state.likes} liked this
           </span>
         </div>
       );
     }
     return (
       <div className="card">
-        <img src={this.props.image} alt="rest img" height="200" width="200" />
+        <img src={this.props.image} alt="rest img" height="200" width="200" className="cardimg"/>
+        <div className="details">
         <h1>{this.props.title}</h1>
         <p className="ratings">{this.props.rating} / 5</p>
-        <p>{this.props.timings}</p>
+        <p className="timings">{this.props.timings}</p>
+        </div>
         {button}
         
       </div>
