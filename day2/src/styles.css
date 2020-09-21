@@ -1,0 +1,217 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fdf1f1;
+}
+.navbar {
+  background-color: #db5050;
+  width: 100%;
+  position: fixed;
+  min-height: 10vh;
+}
+.navbar .title {
+  color: rgb(255, 250, 250);
+  line-height: 10vh;
+  text-align: left;
+  font-size: 1.3rem;
+  padding-left: 3vw;
+}
+form {
+  min-height: 10vh;
+  margin-top: 1vh;
+  position: fixed;
+  top: 1vh;
+  right: 1vh;
+}
+#searchBar {
+  border: none;
+  height: 5vh;
+  color: #ffeaea;
+  font-size: 0.7rem;
+  border-bottom: 1.1px solid #ffeaea;
+  padding: 2px;
+  background-color: #db5050;
+}
+::placeholder {
+  color: #ffeaea;
+}
+
+#search {
+  border: none;
+  background-color: rgb(255, 250, 250);
+  color: #db5050;
+  border-radius: 4px;
+  height: 5vh;
+  font-size: 0.7rem;
+  margin-left: 8px;
+  font-size: 0.7rem;
+}
+.heading {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-top: 6vh;
+  padding-left: 8.5vw;
+}
+
+.card {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  max-width: 200px;
+  margin: auto;
+  text-align: left;
+  font-family: arial;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(124, 32, 32, 0.6);
+  border-radius: 10px;
+}
+.ratings {
+  color: #db5050;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.likes {
+  font-size: 0.7rem;
+  display: block;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  background-color: rgb(235, 255, 204);
+  padding-left: 8%;
+}
+
+.timings {
+  font-size: 0.8rem;
+}
+.cardimg {
+  border-radius: 10px 10px;
+}
+.details {
+  padding-left: 8%;
+}
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+.heading {
+  text-align: left;
+  font-size: 1.4rem;
+  margin-top: 6vh;
+  padding-left: 8.5vw;
+}
+
+.card {
+  display: inline-block;
+  background-color: rgb(255, 255, 255);
+  max-width: 200px;
+  margin: auto;
+  text-align: left;
+  font-family: arial;
+  border-radius: 10px;
+  margin: 15px;
+  font-size: 10px;
+  padding-bottom: 10px;
+}
+.card:hover {
+  box-shadow: 0 4px 8px 0 rgba(124, 32, 32, 0.6);
+  border-radius: 10px;
+}
+.ratings {
+  color: #db5050;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.likes {
+  font-size: 0.7rem;
+  display: block;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+  background-color: rgb(235, 255, 204);
+  padding-left: 8%;
+}
+
+.timings {
+  font-size: 0.8rem;
+}
+.cardimg {
+  border-radius: 10px 10px;
+}
+.details {
+  padding-left: 8%;
+}
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+
+  font-size: 0.8rem;
+}
+.cardimg {
+  border-radius: 10px 10px;
+}
+.details {
+  padding-left: 8%;
+}
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+.avgcost {
+  font-size: 0.7rem;
+}
+
+.mainDetails {
+  text-align: left;
+}
+.mainDetails button {
+  color: #db5050;
+  background-color: #fdf1f1;
+  border: none;
+  padding-left: 10vw;
+  margin-top: 8vh;
+  font-size: 1.4rem;
+}
+.mainDetails button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+.mainDetails img {
+  display: block;
+  width: 50vw;
+  margin-top: 8vh;
+  padding-left: 10vw;
+}
+.detailText {
+  padding-left: 10vw;
+  margin-top: 8vh;
+}
+.detailText h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 3vh;
+  color: rgb(95, 92, 92);
+}
+@media only screen and (max-width: 360px) {
+  .navbar .title {
+    font-size: 1.1rem;
+  }
+}
