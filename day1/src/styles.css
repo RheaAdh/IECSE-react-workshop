@@ -7,62 +7,85 @@ body {
   padding: 0;
   background-color: #fdf1f1;
 }
+.navbar img {
+  height: 9vh;
+}
+.navText {
+  line-height: 10vh;
+  padding: 0;
+}
 .navbar {
   background-color: #db5050;
   width: 100%;
   position: fixed;
   min-height: 10vh;
+  display: flex;
+  align-items: center;
 }
 .navbar .title {
+  display: inline-block;
   color: rgb(255, 250, 250);
-  line-height: 10vh;
   text-align: left;
-  font-size: 1rem;
-  padding-left: 3vw;
-  font-weight: bold;
+  font-size: 1.5rem;
 }
-form {
-  min-height: 10vh;
-  margin-top: 1vh;
-  position: fixed;
-  top: 1vh;
-  right: 1vh;
-}
+
 #searchBar {
   border: none;
   height: 5vh;
-  color: #ffeaea;
-  font-size: 0.7rem;
-  border-bottom: 1.1px solid #ffeaea;
+  color: #db5050;
+  font-size: 0.8rem;
+  border-bottom: 1.1px solid #db5050;
   padding: 2px;
-  background-color: #db5050;
+  background-color: #fdf1f1;
 }
 ::placeholder {
-  color: #ffeaea;
+  color: #db5050;
 }
 
 #search {
   border: none;
-  background-color: rgb(255, 250, 250);
-  color: #db5050;
+  background-color: #db5050;
+  color: rgb(255, 250, 250);
   border-radius: 4px;
   height: 5vh;
-  font-size: 0.7rem;
+  padding: 0 16px;
+  font-size: 0.8rem;
   margin-left: 8px;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  margin-right: 16px;
+}
+#search:hover {
+  cursor: pointer;
+}
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 6vh;
+  color: #db5050;
+  /* padding: 1.5rem; */
+  width: 90%;
+  margin: 8vh auto 3vh;
+}
+
+.restaurants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 90%;
+  margin: 10px auto;
 }
 
 .card {
-  display: inline-block;
   background-color: rgb(255, 255, 255);
   max-width: 200px;
-  margin: auto;
   text-align: left;
   font-family: arial;
   border-radius: 10px;
-  margin: 15px;
-  font-size: 10px;
   padding-bottom: 10px;
+  margin: 10px;
 }
 .card:hover {
   box-shadow: 0 4px 8px 0 rgba(124, 32, 32, 0.6);
@@ -70,7 +93,7 @@ form {
 }
 .ratings {
   color: #db5050;
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 .likes {
@@ -83,8 +106,11 @@ form {
   background-color: rgb(235, 255, 204);
   padding-left: 8%;
 }
+.likes:hover {
+  cursor: pointer;
+}
 .timings {
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 .cardimg {
   border-radius: 10px 10px;
@@ -92,11 +118,48 @@ form {
 .details {
   padding-left: 8%;
 }
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+
+  font-size: 0.8rem;
+}
+.cardimg {
+  border-radius: 10px 10px 0 0;
+}
+.details h3 {
+  font-size: 1.2rem;
+}
+.details h3:hover {
+  cursor: pointer;
+  color: #db5050;
+}
+.arrow {
+  font-size: 1.2rem;
+}
+.details h4 {
+  font-size: 0.9rem;
+}
+.details {
+  padding-left: 8%;
+}
+a {
+  color: black;
+}
+a:link {
+  text-decoration: none;
+  color: black;
+}
+.avgcost {
+  font-size: 0.8rem;
+}
+
 @media only screen and (max-width: 360px) {
   .navbar .title {
     font-size: 1.1rem;
   }
 }
-.avgcost {
-  font-size: 0.7rem;
-}
+

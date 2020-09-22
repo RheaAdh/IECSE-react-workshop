@@ -4,7 +4,12 @@ export default class NavigationBar extends React.Component {
     return (
       <>
         <div className="navbar">
-          <div class="title">Let's React</div>
+          <img
+            height="50px"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1024px-React-icon.svg.png"
+            alt="reactlogo"
+          />
+          <span className="title">Let's React</span>
         </div>
       </>
     );

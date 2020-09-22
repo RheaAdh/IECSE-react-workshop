@@ -1,14 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+require("dotenv").config();
 export default class ResDetails extends React.Component {
   constructor(props) {
-    super(props)
-  
+    super(props);
+
     this.state = {
-       data:{}
-    }
+      data: {}
+    };
   }
-  
+
   componentDidMount() {
     console.log(this.props);
     fetch(
@@ -17,7 +18,7 @@ export default class ResDetails extends React.Component {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "user-key": "f96f5f00b16133106eac209d1cb6724b"
+          "user-key": process.env.REACT_APP_API_KEY
         }
       }
     )
@@ -41,19 +42,17 @@ export default class ResDetails extends React.Component {
         </Link>
         <div className="container">
           <div className="image">
-          <img src={imgSrc} height="500" width=" 500" alt="" />
+            <img src={imgSrc} height="500" width=" 500" alt="" />
           </div>
           <div className="text">
-          <div className="detailText">
-          <h1>{this.state.data.name}</h1>
-          <h3>Timings: {this.state.data.timings}</h3>
-          <h3>Cuisines: {this.state.data.cuisines}</h3>
-          <h3>Contact: {this.state.data.phone_numbers}</h3>
-        </div>
+            <div className="detailText">
+              <h1>{this.state.data.name}</h1>
+              <h3>Timings: {this.state.data.timings}</h3>
+              <h3>Cuisines: {this.state.data.cuisines}</h3>
+              <h3>Contact: {this.state.data.phone_numbers}</h3>
+            </div>
           </div>
         </div>
-        
-        
       </div>
     );
   }

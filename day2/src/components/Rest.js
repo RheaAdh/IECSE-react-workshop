@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export default class Rest extends React.Component {
-  
-constructor(props) {
-  super(props)
+  constructor(props) {
+    super(props);
 
-  this.state = { liked: 0, likes: 78 }
-}
+    this.state = { liked: 0, likes: 78 };
+  }
 
   render() {
     const liked = this.state.liked;
@@ -45,30 +44,31 @@ constructor(props) {
     return (
       <div className="card">
         {/* <Link to={{ pathname:`/res_details/${this.props.restaurant.res_id}`}} >Click here<Link/> */}
-        <Link
-          to={{
-            pathname: `/res_details/${this.props.resid}`,
-            state: {
-              from: this.props.location.pathname
-            }
-          }}
-        >
-          <img
-            src={img}
-            alt="rest img"
-            height="200"
-            width="200"
-            className="cardimg"
-          />
 
-          <div class="details">
+        <img
+          src={img}
+          alt="rest img"
+          height="200"
+          width="200"
+          className="cardimg"
+        />
+
+        <div class="details">
+          <Link
+            to={{
+              pathname: `/res_details/${this.props.resid}`,
+              state: {
+                from: this.props.location.pathname
+              }
+            }}
+          >
             <h3>{this.props.title}</h3>
-            <h4>{this.props.cuisine}</h4>
-            <p className="ratings">{this.props.rating} / 5</p>
-            <p className="avgcost">Avg cost for two: {this.props.avgcost}</p>
-          </div>
-          {button}
-        </Link>
+          </Link>
+          <h4>{this.props.cuisine}</h4>
+          <p className="ratings">{this.props.rating} / 5</p>
+          <p className="avgcost">Avg cost for two: {this.props.avgcost}</p>
+        </div>
+        {button}
       </div>
     );
   }

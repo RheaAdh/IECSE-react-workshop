@@ -1,11 +1,16 @@
+
+import Data from "./Data";
 import React from "react";
 import Rest from "./Rest";
-import Data from "./Data"
+require("dotenv").config();
 export default class Home extends React.Component {
   //SEARCH
-  state = {
-    query: ""
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      query: ""
+    }
+  }
 
   handleInputChange = (event) => {
     this.setState({
@@ -14,29 +19,49 @@ export default class Home extends React.Component {
   };
 
   render() {
+    const form = (
+      <form>
+        <input
+          id="searchBar"
+          placeholder="Enter your city"
+          value={this.state.query}
+          onChange={this.handleInputChange}
+        />
+        <button id="search">
+          
+          Search {this.state.query}
+        </button>
+      </form>
+    );
     return (
       <>
-        <form>
-          <input
-            id="searchBar"
-            placeholder="Enter your city"
-            value={this.state.query}
-            onChange={this.handleInputChange}
-          />
-          <button id="search"> Search {this.state.query} </button>
-        </form>
-        {Data.map((rest)=>{
-          return <Rest 
-          image={rest.image} 
-          title={rest.title}
-          rating={rest.rating}
-          timings={rest.timings}
-          likes={rest.likes}/>
-        })}
-        
-        
-        
+
+        <div>
+          <div className="heading">
+            <div> Top restaurants in Manipal </div>
+            <div>{form}</div>
+          </div>
+
+          <div className="restaurants">
+            {Data.map((rest, index) => {
+              return (
+                <Rest
+                  resid={rest.id}
+                  title={rest.title}
+                  cuisine={rest.cuisine}
+                  image={rest.image}
+                  rating={rest.rating}
+                  avgcost={rest.avgcost}
+                  location={this.props.location}
+                  likes={rest.likes}
+                  key={index}
+                />
+              );
+            })}
+          </div>
+        </div>
       </>
     );
   }
 }
+
