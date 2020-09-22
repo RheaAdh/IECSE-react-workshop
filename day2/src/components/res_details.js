@@ -1,9 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export default class ResDetails extends React.Component {
-  state = {
-    data: {}
-  };
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+       data:{}
+    }
+  }
+  
   componentDidMount() {
     console.log(this.props);
     fetch(
@@ -34,14 +39,21 @@ export default class ResDetails extends React.Component {
         <Link to={from}>
           <button>Back To Home</button>
         </Link>
-
-        <img src={imgSrc} height="500" width=" 500" alt="" />
-        <div className="detailText">
+        <div className="container">
+          <div className="image">
+          <img src={imgSrc} height="500" width=" 500" alt="" />
+          </div>
+          <div className="text">
+          <div className="detailText">
           <h1>{this.state.data.name}</h1>
           <h3>Timings: {this.state.data.timings}</h3>
           <h3>Cuisines: {this.state.data.cuisines}</h3>
           <h3>Contact: {this.state.data.phone_numbers}</h3>
         </div>
+          </div>
+        </div>
+        
+        
       </div>
     );
   }

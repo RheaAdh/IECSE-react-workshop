@@ -2,13 +2,18 @@ import React from "react";
 import Rest from "./Rest";
 export default class Home extends React.Component {
   //SEARCH
-  state = {
-    query: "",
-    entity_id: "11299",
-    entity_type: "city",
-    city_name: "Manipal",
-    res: []
-  };
+  constructor(props) {
+    super(props)
+  
+    this.state = {
+      query: "",
+      entity_id: "11299",
+      entity_type: "city",
+      city_name: "Manipal",
+      res: []
+    }
+  }
+  
 
   handleInputChange = (event) => {
     this.setState({
@@ -92,7 +97,7 @@ export default class Home extends React.Component {
             Search{" "}
           </button>
         </form>
-        <div class="heading">Top restaurants in {this.state.city_name}</div>
+        <div class="heading"><center>Top restaurants in {this.state.city_name}</center></div>
         {this.state.res.map((rest) => {
           return (
             <Rest

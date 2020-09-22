@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 export default class Rest extends React.Component {
-  state = { liked: 0, likes: 78 };
+  
+constructor(props) {
+  super(props)
+
+  this.state = { liked: 0, likes: 78 }
+}
 
   render() {
     const liked = this.state.liked;
@@ -57,8 +62,8 @@ export default class Rest extends React.Component {
           />
 
           <div class="details">
-            <h1>{this.props.title}</h1>
-            <h2>{this.props.cuisine}</h2>
+            <h3>{this.props.title}</h3>
+            <h4>{this.props.cuisine}</h4>
             <p className="ratings">{this.props.rating} / 5</p>
             <p className="avgcost">Avg cost for two: {this.props.avgcost}</p>
           </div>
