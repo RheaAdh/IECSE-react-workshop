@@ -29,7 +29,7 @@ export default class Home extends React.Component {
         />
         <button id="search">
           
-          Search {this.state.query}
+          Search
         </button>
       </form>
     );
